@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Container to hold the quiz screen --> -->
+
+    <!-- Game title -->
+   <!-- <header>
+        <img src='assets/images/Game-of-Thrones-header.png' width='100%'>
+    </header> -->
+    <div class="page-header">
+            <h1>Game Of Thrones Trivia</h1>          
+        </div>
+        
+    <div class="start-page">
+        
+           
+       
+        <!-- start page -->
+        <button class='btn btn-primary' id='startBtn'>Start Game</button>
+
+        <div class="instructions">
+                  <h1>Instructions:</h1> 
+                  <p>Once you hit the "Start Game" button, you will have 60 seconds to answer 10 questions. Hit the submit button once done. If time expires, the game is over.</p> 
+                
+              </div>
+    </div>
+        <!-- questions page -->
+        <!-- countdown timer -->
+    <div class = "main-game">
+        <div id="timer">Time Left:
+            <div id="time-left"></div>
+        </div>
+        <br>
+        <br>
+
+        <!-- game questions -->
+
+        <h4 id = "question" class = "q1">1.  What castle has House Stark ruled for most of their ancestry?</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio1" value = "Casterly Rock">Casterly Rock</label>
+        <label class="radio-inline"><input type="radio" name="optradio1" value = "Winterfell">Winterfell</label>
+        <label class="radio-inline"><input type="radio" name="optradio1" value = "Highgarden">Highgarden</label>
+        <label class="radio-inline"><input type="radio" name="optradio1" value = "Dragonstone">Dragonstone</label>
+        <br>
+        <br>
+
+        <h4 id = "question" class = "q2">2.  Who does Daenarys Targaryen refer to as "My Sun and My Stars?"</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio2" value = "Khal Drogo">Khal Drogo</label>
+        <label class="radio-inline"><input type="radio" name="optradio2" value = "Tyrion Lannister">Tyrion Lannister</label>
+        <label class="radio-inline"><input type="radio" name="optradio2" value = "Viserys Targaryen">Viserys Targaryen</label>
+        <label class="radio-inline"><input type="radio" name="optradio2" value = "Jorah Mormont">Jorah Mormont</label>
+        <br>
+        <br>
+        <h4 id = "question" class = "q3">3.  What family kills Catelyn and Robb Stark at the The Red Wedding?</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio3" value = "Lannisters">Lannisters</label>
+        <label class="radio-inline"><input type="radio" name="optradio3" value = "Martells">Martells</label>
+        <label class="radio-inline"><input type="radio" name="optradio3" value = "Freys">Freys</label>
+        <label class="radio-inline"><input type="radio" name="optradio3" value = "Tarlys">Tarlys</label>
+        <br>
+        <br>
+        <h4 id = "question" class = "q4">4.  Who admits to killing Joffrey Lannister?</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio4" value = "Tyrion Lannister">Tyrion Lannister</label>
+        <label class="radio-inline"><input type="radio" name="optradio4" value = "Sansa Stark">Sansa Stark</label>
+        <label class="radio-inline"><input type="radio" name="optradio4" value = "Margaery Tyrell">Margaery Tyrell</label>
+        <label class="radio-inline"><input type="radio" name="optradio4" value = "Olenna Tyrell">Olenna Tyrell</label>
+        <br>
+        <br>
+        <h4 id = "question" class = "q5">5.  What is the name of Jon Snow's direwolf?</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio5"  value = "Olenna Tyrell">C</label>
+        <label class="radio-inline"><input type="radio" name="optradio5" value = "Summer">Summer</label>
+        <label class="radio-inline"><input type="radio" name="optradio5" value = "Ghost">Ghost</label>
+        <label class="radio-inline"><input type="radio" name="optradio5" value = "Lady">Lady</label>
+        <br>
+        <br>
+        <h4 id = "question" class = "q6">6.   Who is considered the leader of the Unsullied?</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio6" value = "Grey Worm">Grey Worm</label>
+        <label class="radio-inline"><input type="radio" name="optradio6" value = "Bran Stark">Bran Stark</label>
+        <label class="radio-inline"><input type="radio" name="optradio6" value = "Varys">Varys</label>
+        <label class="radio-inline"><input type="radio" name="optradio6" value = "Robert Arryn">Robert Arryn</label>
+        <br>
+        <br>
+        <h4 id = "question" class = "q7">7.   Who is responsible for creating the White Walkers?</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio7" value = "Giants">Giants</label>
+        <label class="radio-inline"><input type="radio" name="optradio7" value = "The Mad King">The Mad King</label>
+        <label class="radio-inline"><input type="radio" name="optradio7" value "The Children of the Forest">The Children of the Forest</label>
+        <label class="radio-inline"><input type="radio" name="optradio7" value = "Valyrians">Valyrians</label>
+        <br>
+        <br>
+        <h4 id = "question" class = "q8">8.  Who is Jon Snow's father?</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio8" value = "Robert Baratheon">Robert Baratheon</label>
+        <label class="radio-inline"><input type="radio" name="optradio8" value = "Rhaegar Targaryen">Rhaegar Targaryen</label>
+        <label class="radio-inline"><input type="radio" name="optradio8" value = "Ned Stark">Ned Stark</label>
+        <label class="radio-inline"><input type="radio" name="optradio8" value = "Sandor Clegane">Sandor Clegane</label>
+        <br>
+        <br>
+        <h4 id = "question" class = "q9">9.  Who blows up King's Landing?</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio9" value = "Tywin Lannister">Tywin Lannister</label>
+        <label class="radio-inline"><input type="radio" name="optradio9" value = "Jaime Lannister">Jaime Lannister</label>
+        <label class="radio-inline"><input type="radio" name="optradio9" value = "Hodor">Hodor</label>
+        <label class="radio-inline"><input type="radio" name="optradio9" value = "Cersei Lannister">Cersei Lannister</label>
+        <br>
+        <br>
+        <h4 id = "question" class = "q10">10.  Who kills Petyr Baelish?</h4>
+
+        <label class="radio-inline"><input type="radio" name="optradio10" value = "Littlefinger">Littlefinger</label>
+        <label class="radio-inline"><input type="radio" name="optradio10" value = "Sansa Stark">Sansa Stark</label>
+        <label class="radio-inline"><input type="radio" name="optradio10" value = "Arya Stark">Arya Stark</label>
+        <label class="radio-inline"><input type="radio" name="optradio10" value = "Bran Stark">Bran Stark</label>
+<br>
+<br>
+<br>
+<button class='btn btn-primary' id='submitBtn'>Submit</button>
+
+    </div>
+ <!-- results page -->
+    <div class = "results-page">
+       
+       <h2>Time's Up!<hr></h2>
+       
+       <h2>Correct Answers:<span id = "correct-answers"></span></h2>
+       <h2>Incorrect Answers:<span id = "incorrect-answers"></span></h2>
+       <h2>Answered:<span id = "answered"></span></h2>
+       <h2>Unanswered:<span id = "unanswered"></span></h2>
+
+      <br>
+    
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
