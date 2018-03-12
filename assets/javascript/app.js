@@ -1,5 +1,5 @@
 // define variables
-var timer = 60;
+var timer = 10;
 
 var totalAnswered = 0;
 var totalUnanswered = 0;
@@ -48,7 +48,7 @@ $(document).ready(function () {
     
 
 
-    function gameOver() {}
+    function gameOver() {
 
     $('.results-page').show();
 
@@ -190,7 +190,7 @@ $(document).ready(function () {
         $('#incorrect-answers').html(totalIncorrect);
         $('#answered').html(totalAnswered);
         $('#unanswered').html(totalUnanswered);
-
+    }
 
     }
     
