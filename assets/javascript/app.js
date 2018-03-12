@@ -1,5 +1,5 @@
 // define variables
-var timer = 10;
+var timer = 60;
 
 var totalAnswered = 0;
 var totalUnanswered = 0;
